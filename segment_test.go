@@ -3,6 +3,7 @@ package cmap
 import (
 	"fmt"
 	"testing"
+	"time"
 )
 
 func TestSegmentNew(t *testing.T) {
@@ -292,4 +293,19 @@ func TestSegmentAllInParallel(t *testing.T) {
 			}
 		})
 	})
+}
+
+func TestRunParallel(t *testing.T) {
+	t.Run("TestParallel", func(t *testing.T) {
+		t.Parallel()
+		time.Sleep(time.Second * 6)
+		t.Log("so wait me")
+	})
+	t.Run("TestParallel2", func(t *testing.T) {
+		t.Parallel()
+		time.Sleep(time.Second * 4)
+		t.Log("so wait me")
+	})
+
+	t.Log("hahahah")
 }
