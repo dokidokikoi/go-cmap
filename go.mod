@@ -1,3 +1,3 @@
-module github.com/dokidokikoi/cmap
+module github.com/dokidokikoi/go-cmap
 
 go 1.19
